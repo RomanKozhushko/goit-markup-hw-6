@@ -66,14 +66,77 @@
         </div>
         <div data-modal class="backdrop is-hidden">
           <div class="modal">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non eos
-              rem accusamus eum voluptatibus in ea laboriosam ipsam quaerat
-              voluptatum deserunt ab, labore doloremque fugit ducimus hic,
-              eveniet porro voluptates!
-            </p>
-            <button data-modal-close class="modal-button" type="button">
-              <img src="./images/close-black.png" alt="x" />
+            <h2 class="modal-head">Оставьте свои данные, мы вам перезвоним</h2>
+            <form class="js-speaker-form">
+              <div>
+                <div class="form-fild">
+                  <label class="input-name" for="name">Имя</label>
+                  <input
+                    class="input-frame"
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder=" "
+                  />
+                  <span class="vector-person"></span>
+                </div>
+                <div class="form-fild">
+                  <label class="input-name" for="tel">Телефон</label>
+                  <input
+                    class="input-frame"
+                    type="text"
+                    name="tel"
+                    id="tel"
+                    placeholder=" "
+                  />
+                  <span class="vector-phone"></span>
+                </div>
+                <div class="form-fild">
+                  <label class="input-name" for="email">Почта</label>
+                  <input
+                    class="input-frame"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder=" "
+                  />
+                  <span class="vector-email"></span>
+                </div>
+                <div>
+                  <label class="input-name" for="">Оставить коментарий</label>
+                  <textarea
+                    class="input-comment"
+                    name="comment"
+                    id="coment"
+                    cols="30"
+                    rows="10"
+                    placeholder="Введите текст"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="check">
+                <input
+                  class="check__input"
+                  type="checkbox"
+                  value="contract"
+                  name="contract"
+                  id="contract"
+                />
+                <span class="check___box"></span>
+                <label class="ok" for="contract"
+                  >Соглашаюсь с рассылкой и принимаю
+                  <span><a href="" class="ok-span">Условия договора</a></span>
+                </label>
+              </div>
+              <button type="submit" class="pres place-button">Отправить</button>
+            </form>
+            <button
+              data-modal-close
+              class="modal-button button-new"
+              type="button"
+            >
+              <!-- <img src="./images/close-black.png" alt="x" /> -->
             </button>
           </div>
         </div>
@@ -464,6 +527,22 @@
             </li>
           </ul>
         </div>
+        <div>
+          <form class="form-fild-footer">
+            <label class="input-name-footer" for="email"
+              >Подпишитесь на рассылку</label
+            >
+            <input
+              class="input-frame-footer"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="pres">Подписаться</button>
+          </form>
+        </div>
+
       </div>
     </footer>
     <script src="./modal.js"></script>
