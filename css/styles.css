@@ -181,6 +181,7 @@ p {
     url(../images/Hero.jpg);
 }
 .pres {
+  position: relative;
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -189,7 +190,7 @@ p {
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-  padding: 10px 32px;
+  padding: 10px;
   min-width: 200px;
   min-height: 50px;
   margin-left: auto;
@@ -220,7 +221,6 @@ p {
 .logoh:hover,
 .logoh:focus {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logos {
@@ -745,10 +745,12 @@ img {
 }
 .item:focus .overlay {
   transform: translatey(0);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item:hover .overlay {
   transform: translatey(0);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
@@ -789,10 +791,12 @@ img {
   width: 32px;
   border-radius: 50%;
   background-image: url(../images/SVG/close_none_active.svg);
+  transition: 250ms;
 }
 .button-new:focus,
 .button-new:active {
   background-image: url(../images/SVG/close_active.svg);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-head {
@@ -816,24 +820,30 @@ img {
   margin-bottom: 10px;
   padding-left: 40px;
   cursor: pointer;
+  transition: 250ms;
 }
 
 .input-frame:focus + .vector-person {
   background-image: url(../images/SVG/person_blue.svg);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-frame:focus {
   outline: none;
   border: 1px solid var(--accent-color);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-frame:focus + .vector-phone {
   background-image: url(../images/SVG/phone_blue.svg);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-frame:focus + .vector-email {
   background-image: url(../images/SVG/email_blue.svg);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-comment:focus {
   outline: none;
   border: 1px solid var(--accent-color);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .vector-person {
   position: absolute;
@@ -842,6 +852,7 @@ img {
   width: 18px;
   height: 18px;
   background-image: url(../images/SVG/person_black.svg);
+  transition: 250ms;
 }
 
 .vector-phone {
@@ -851,6 +862,7 @@ img {
   width: 18px;
   height: 18px;
   background-image: url(../images/SVG/phone_black.svg);
+  transition: 250ms;
 }
 .vector-email {
   position: absolute;
@@ -859,6 +871,7 @@ img {
   width: 18px;
   height: 18px;
   background-image: url(../images/SVG/email_black.svg);
+  transition: 250ms;
 }
 
 .input-name {
@@ -868,6 +881,8 @@ img {
   letter-spacing: 0.01em;
   color: #757575;
   margin-bottom: 4px;
+  transition: 250ms;
+  transition: 250ms;
 }
 .check__input {
   appearance: none;
@@ -900,6 +915,7 @@ img {
   border-radius: 4px;
   padding: 12px 16px;
   cursor: pointer;
+  transition: 250ms;
 }
 .ok {
   position: absolute;
@@ -930,6 +946,7 @@ img {
   height: 86px;
   display: block;
   margin-left: 93px;
+  padding-top: 12px;
 }
 .input-name-footer {
   display: block;
@@ -948,8 +965,37 @@ img {
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  margin-top: 20px;
   background-color: transparent;
   padding: 15px 16px;
   color: #ffffff;
+}
+.icon-send {
+  width: 24px;
+  height: 24px;
+  bottom: 13px;
+  right: 28px;
+  margin-right: 0;
+}
+.pres-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--primary-white-color);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 29px;
+  margin-left: 12px;
+}
+.group {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-top: 20px;
 }
