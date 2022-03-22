@@ -54,7 +54,7 @@
       </div>
     </header>
     <main>
-      <section class="section">
+      <section>
         <div class="container box-hero hero-img">
           <h1 class="hero">
             Эффективные решения <br />
@@ -103,7 +103,7 @@
                 />
                 <span class="vector-email"></span>
               </div>
-              <div>
+              <div class="form-fild">
                 <label class="input-name" for="comment"
                   >Оставить коментарий</label
                 >
@@ -131,15 +131,15 @@
                   <span><a href="" class="ok-span">Условия договора</a></span>
                 </label>
               </div>
-              <button type="submit" class="pres place-button">Отправить</button>
+              <button class="pres place-button" type="submit">Отправить</button>
+              <div>
+                <button
+                  data-modal-close
+                  class="modal-button button-new"
+                  type="button"
+                ></button>
+              </div>
             </form>
-            <button
-              data-modal-close
-              class="modal-button button-new"
-              type="button"
-            >
-              <!-- <img src="./images/close-black.png" alt="x" /> -->
-            </button>
           </div>
         </div>
       </section>
@@ -222,8 +222,8 @@
           </ul>
         </div>
       </section>
-      <section class="section color-team">
-        <div class="container">
+      <section>
+        <div class="container color-team">
           <h2 class="activis">Наша команда</h2>
           <ul class="box-team">
             <li class="man">
@@ -418,51 +418,53 @@
         </div>
       </section>
       <section class="section">
-        <h2 class="activis">Постоянные клиенты</h2>
-        <ul class="partners">
-          <li>
-            <a class="box" href="">
-              <svg class="partner" width="41px" height="47px">
-                <use href="./images/symbol-defs+.svg#icon-client1"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="box" href="">
-              <svg class="partner" width="42px" height="52px">
-                <use href="./images/symbol-defs+.svg#icon-client2"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="box" href="">
-              <svg class="partner" width="44px" height="42px">
-                <use href="./images/symbol-defs+.svg#icon-client3"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="box" href="">
-              <svg class="partner" width="106px" height="60px">
-                <use href="./images/symbol-defs+.svg#icon-client4"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="box" href="">
-              <svg class="partner" width="63px" height="66px">
-                <use href="./images/symbol-defs+.svg#icon-client5"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="box" href="">
-              <svg class="partner" width="106px" height="60px">
-                <use href="./images/symbol-defs+.svg#icon-client6"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="activis">Постоянные клиенты</h2>
+          <ul class="partners">
+            <li>
+              <a class="box" href="">
+                <svg class="partner" width="41px" height="47px">
+                  <use href="./images/symbol-defs+.svg#icon-client1"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="box" href="">
+                <svg class="partner" width="42px" height="52px">
+                  <use href="./images/symbol-defs+.svg#icon-client2"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="box" href="">
+                <svg class="partner" width="44px" height="42px">
+                  <use href="./images/symbol-defs+.svg#icon-client3"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="box" href="">
+                <svg class="partner" width="106px" height="60px">
+                  <use href="./images/symbol-defs+.svg#icon-client4"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="box" href="">
+                <svg class="partner" width="63px" height="66px">
+                  <use href="./images/symbol-defs+.svg#icon-client5"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="box" href="">
+                <svg class="partner" width="106px" height="60px">
+                  <use href="./images/symbol-defs+.svg#icon-client6"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer class="color-foot">
@@ -489,7 +491,7 @@
           </address>
         </div>
         <div class="media">
-          <h3 class="join">ПРИСОЕДИНЯЙТЕСЬ</h3>
+          <strong class="join">присоединяйтесь</strong>
           <ul class="media-link">
             <li class="circle">
               <div class="circles">
@@ -529,30 +531,28 @@
             </li>
           </ul>
         </div>
-        <div>
-          <form class="form-fild-footer">
-            <label class="input-name-footer" for="email"
-              >Подпишитесь на рассылку</label
-            >
-            <div class="group">
-              <input
-                class="input-frame-footer"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail"
+        <form class="form-fild-footer">
+          <label class="input-name-footer" for="email"
+            >Подпишитесь на рассылку</label
+          >
+          <div class="group">
+            <input
+              class="input-frame-footer"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="pres-footer">
+              Подписаться
+              <img
+                class="icon-send"
+                src="./images/SVG/icon_send.svg"
+                alt="send"
               />
-              <button type="submit" class="pres-footer">
-                Подписаться
-                <img
-                  class="icon-send"
-                  src="./images/SVG/icon_send.svg"
-                  alt="send"
-                />
-              </button>
-            </div>
-          </form>
-        </div>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
     <script src="./modal.js"></script>
