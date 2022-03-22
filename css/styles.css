@@ -211,7 +211,6 @@ p {
   font-weight: bold;
   font-size: 26px;
   line-height: 31px;
-  /* identical to box height */
   letter-spacing: 0.03em;
   text-decoration: none;
   margin-top: auto;
@@ -328,7 +327,6 @@ p {
 .advantages {
   font-size: 14px;
   line-height: 1.71;
-  /* or 171% */
   letter-spacing: 0.03em;
   color: var(--fone-color-cotrast);
   margin-top: 10px;
@@ -750,6 +748,7 @@ img {
 .is-hidden .modal {
   transform: translate(-50%, -50%);
   opacity: 0;
+  transition-duration: 250ms;
 }
 
 .modal {
@@ -758,11 +757,10 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 1;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   width: 528px;
   padding: 40px;
   background-color: var(--primary-white-color);
+  transition-duration: 250ms;
 }
 
 .backdrop {
@@ -797,7 +795,7 @@ img {
 }
 .button-new:focus,
 .button-new:active {
-  transition-duration: 250ms;
+  transition-duration: 1250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-color: #2196f3;
   outline: none;
@@ -829,12 +827,10 @@ img {
   border-radius: 4px;
   padding-left: 40px;
   cursor: pointer;
-  transition: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .input-frame:focus + .vector-person {
-  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   background-image: url(../images/SVG/person_blue.svg);
 }
