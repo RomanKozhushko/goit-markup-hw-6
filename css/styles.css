@@ -27,13 +27,44 @@ body {
   font-weight: 500;
   line-height: 1.5;
 }
-.active-page {
-  color: var(--accent-color);
-  text-decoration: none;
+.navis .link {
+  display: block;
+  padding-top: 32px;
   padding-bottom: 32px;
-  position: relative;
+  color: var(--title-text-color);
+  text-decoration: none;
   transition-duration: 250ms;
 }
+.navis .link {
+  margin-right: 50px;
+}
+
+.lik {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--title-text-color);
+  text-decoration: none;
+  transition-duration: 250ms;
+}
+.link {
+  display: block;
+  color: var(--title-text-color);
+  text-decoration: none;
+  transition-duration: 250ms;
+}
+
+.active-page {
+  display: block;
+  color: var(--accent-color);
+  text-decoration: none;
+  position: relative;
+  transition-duration: 250ms;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-right: 50px;
+}
+
 .active-page:after {
   content: "";
   color: var(--accent-color);
@@ -46,10 +77,12 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+  padding-bottom: 0;
 }
 
 * {
   list-style: none;
+  box-sizing: border-box;
 }
 h1,
 h2,
@@ -60,6 +93,7 @@ h6,
 ul,
 p {
   margin: 0;
+  padding: 0;
 }
 .navi,
 .navis,
@@ -70,7 +104,6 @@ p {
 .box-advantage,
 .box-team,
 .button-box {
-  padding: 0;
   margin: 0;
   list-style: none;
   display: flex;
@@ -88,15 +121,12 @@ p {
 .header-line {
   border-bottom: 1px solid #ececec;
   width: 100%;
-  max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
 }
 .header-box {
   display: flex;
   justify-content: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .phone {
   width: 14px;
@@ -104,11 +134,12 @@ p {
   fill: currentColor;
   text-align: center;
   margin-right: 10px;
-  margin-left: 30px;
 }
 .phone-box {
   display: flex;
+  margin-left: 30px;
 }
+
 .phone:hover,
 .phone:focus {
   fill: currentColor;
@@ -118,6 +149,8 @@ p {
 .linki {
   color: var(--fone-color-cotrast);
   text-decoration: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .linki:hover,
 .linki:focus {
@@ -141,19 +174,15 @@ p {
 }
 
 .navis {
-  width: 294px;
-  height: 16px;
-  justify-content: space-between;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  font-style: normal;
 }
 
 .navi {
   margin-top: auto;
   margin-bottom: auto;
-  margin-right: auto;
+  margin-right: 290px;
   margin-left: 94px;
 }
 
@@ -168,19 +197,21 @@ p {
   background-color: rgba(47, 48, 58, 0.4);
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.hero-img {
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../images/Hero.jpg);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+.box-hero .container {
+  width: 696px;
+}
+
 .pres {
+  display: block;
   position: relative;
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -201,8 +232,6 @@ p {
   line-height: 1.14;
   letter-spacing: 0.02em;
   font-style: normal;
-  margin-top: auto;
-  margin-bottom: auto;
   transition-duration: 250ms;
 }
 .logoh {
@@ -213,6 +242,8 @@ p {
   line-height: 31px;
   letter-spacing: 0.03em;
   text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
   margin-top: auto;
   margin-bottom: auto;
   transition-duration: 250ms;
@@ -226,11 +257,6 @@ p {
   color: var(--accent-color);
 }
 
-.link {
-  color: var(--title-text-color);
-  text-decoration: none;
-  transition-duration: 250ms;
-}
 .mylo:hover,
 .mylo:focus,
 .link:hover,
@@ -253,13 +279,14 @@ p {
 
 .pres:hover,
 .presi:focus {
-  background-color: var(--accent-color);
+  transition-duration: 250ms;
+  background-color: rgba(24, 140, 232, 1);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .presi {
+  font-family: inherit;
   background: var(--no-primary-color);
-
   border-radius: 4px;
   font-size: 16px;
   line-height: 1.63;
@@ -270,6 +297,7 @@ p {
   border: none;
   cursor: pointer;
   padding: 6px 22px;
+  margin-right: 8px;
   transition-duration: 250ms;
 }
 
@@ -285,7 +313,6 @@ p {
 /* Main */
 .box-advantage {
   justify-content: space-between;
-  padding-bottom: 94px;
 }
 .visually-hidden {
   position: absolute;
@@ -303,6 +330,11 @@ p {
 .advant {
   width: 270px;
   height: 251px;
+  margin-right: 30px;
+}
+
+.advant:last-child {
+  margin-right: 0;
 }
 
 .advant-backgraund {
@@ -333,18 +365,19 @@ p {
 }
 .box-activis {
   display: flex;
-  justify-content: space-between;
   max-width: 1170px;
   padding-left: 0px;
 }
 .activity {
   margin-top: 94px;
 }
+
 .activis {
   font-weight: bold;
   margin-top: 0px;
   margin-bottom: 50px;
   font-size: 36px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
@@ -353,6 +386,13 @@ p {
 }
 .box-active {
   position: relative;
+  margin-right: 30px;
+}
+.box-active:last-child {
+  margin-right: 0;
+}
+.section:nth-child(3) {
+  padding-top: 0;
 }
 .active {
   position: absolute;
@@ -376,13 +416,7 @@ p {
 }
 /* ==========PARTNERS=================== */
 .partners {
-  width: 100%;
-  max-width: 1170px;
-  height: 92px;
   display: flex;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
 }
 .box {
   width: 170px;
@@ -404,7 +438,13 @@ p {
   color: var(--accent-color);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.partners li {
+  margin-right: 30px;
+}
 
+.partners li:last-child {
+  margin-right: 0;
+}
 .partner {
   fill: currentColor;
   justify-content: center;
@@ -432,8 +472,6 @@ p {
 .color-team {
   width: 100%;
   max-width: 1600px;
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: var(--no-primary-color);
   margin-left: auto;
   margin-right: auto;
@@ -443,32 +481,36 @@ p {
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
-  justify-content: space-between;
 }
 .man {
   width: 270px;
   height: 428px;
+  margin-right: 30px;
   background-color: var(--primary-white-color);
   text-align: center;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 0px 0px 4px 4px;
 }
-
+.man:last-child {
+  margin-right: 0;
+}
+.description-man {
+  padding: 30px 32px;
+}
 .name {
   font-family: Roboto;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  margin-top: 30px;
-  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .prof {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--fone-color-cotrast);
-  margin-top: 10px;
+
   margin-bottom: 20px;
 }
 .colori {
@@ -537,18 +579,20 @@ footer-content {
 }
 .board-portfilio {
   max-width: 1170px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .button-box {
   list-style: none;
-  width: 611px;
-  height: 54px;
-  justify-content: space-between;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
-  text-align: center;
+}
+.presi-active {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .card-set {
   display: flex;
@@ -612,14 +656,12 @@ img {
   justify-content: center;
   align-items: center;
   display: flex;
-  transition-duration: 250ms;
 }
 .circles {
   fill: var(--grey-boarder);
   justify-content: center;
   align-items: center;
   display: flex;
-  transition-duration: 250ms;
 }
 .circle-man {
   width: 44px;
@@ -632,7 +674,6 @@ img {
   align-items: center;
   display: flex;
   color: var(--grey-boarder);
-  transition-duration: 250ms;
 }
 .social-man {
   width: 20px;
@@ -641,23 +682,19 @@ img {
   justify-content: center;
   align-items: center;
   display: flex;
-  transition-duration: 250ms;
 }
 
 .circle:hover,
 .circle:focus {
+  transition-duration: 250ms;
   background-color: var(--accent-color);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .circle-man:hover,
 .circle-man:focus {
+  transition-duration: 250ms;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-man:hover,
-.social-man:focus {
-  fill: currentColor;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -707,9 +744,6 @@ img {
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
-  width: 319px;
-  height: 70px;
-  margin-top: 0px;
   padding: 20px 24px;
 }
 .item {
@@ -717,6 +751,9 @@ img {
   position: relative;
   overflow: hidden;
   transition-duration: 250ms;
+}
+.text-decor {
+  text-decoration: none;
 }
 .overlay {
   position: absolute;
@@ -794,8 +831,9 @@ img {
   background-image: url(../images/SVG/close_none_active.svg);
 }
 .button-new:focus,
+.button-new:hover,
 .button-new:active {
-  transition-duration: 1250ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-color: #2196f3;
   outline: none;
@@ -812,6 +850,7 @@ img {
 .form-fild {
   position: relative;
   margin-bottom: 10px;
+  text-align: left;
 }
 .form-fild:nth-last-child(4) {
   position: relative;
@@ -827,10 +866,10 @@ img {
   border-radius: 4px;
   padding-left: 40px;
   cursor: pointer;
-  transition-duration: 250ms;
 }
 
 .input-frame:focus + .vector-person {
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   background-image: url(../images/SVG/person_blue.svg);
 }
@@ -858,7 +897,6 @@ img {
 }
 .vector-person {
   position: absolute;
-  transition-duration: 250ms;
   left: 12px;
   bottom: 10px;
   width: 18px;
@@ -868,7 +906,6 @@ img {
 
 .vector-phone {
   position: absolute;
-  transition-duration: 250ms;
   left: 12px;
   bottom: 10px;
   width: 18px;
@@ -877,7 +914,6 @@ img {
 }
 .vector-email {
   position: absolute;
-  transition-duration: 250ms;
   left: 12px;
   bottom: 10px;
   width: 18px;
@@ -887,7 +923,6 @@ img {
 
 .input-name {
   display: block;
-  transition-duration: 250ms;
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.01em;
@@ -900,6 +935,7 @@ img {
 }
 .check___box {
   position: absolute;
+  text-align: right;
   width: 16px;
   height: 15px;
   border: var(--no-title-text-color) solid 2px;
