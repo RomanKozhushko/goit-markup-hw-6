@@ -692,13 +692,13 @@ img {
 
 .circle:hover,
 .circle:focus {
-  transition-duration: 250ms;
+  transition-duration: 500ms;
   background-color: var(--accent-color);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .circle-man:hover,
 .circle-man:focus {
-  transition-duration: 250ms;
+  transition-duration: 500ms;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
