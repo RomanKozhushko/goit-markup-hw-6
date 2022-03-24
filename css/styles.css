@@ -35,24 +35,13 @@ body {
   text-decoration: none;
   transition-duration: 250ms;
 }
-.navis .link {
-  margin-right: 50px;
-}
 
 .lik {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--title-text-color);
-  text-decoration: none;
-  transition-duration: 250ms;
+  margin-right: 50px;
 }
-.lik:hover,
-.lik:focus {
-  color: var(--accent-color);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.lik:last-child {
+  margin-right: 0;
 }
-
 .link {
   display: block;
   color: var(--title-text-color);
@@ -68,7 +57,6 @@ body {
   transition-duration: 250ms;
   padding-top: 32px;
   padding-bottom: 32px;
-  margin-right: 50px;
 }
 
 .active-page:after {
@@ -470,14 +458,12 @@ p {
 }
 .color-ectiv {
   background-color: var(--primary-white-color);
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 .color-team {
-  width: 100%;
-  max-width: 1600px;
   background-color: var(--no-primary-color);
   margin-left: auto;
   margin-right: auto;
@@ -524,15 +510,11 @@ p {
 }
 .color-foot {
   background-color: #2f303a;
-  width: 100%;
-  max-width: 1600px;
-  height: 252px;
   margin-left: auto;
   margin-right: auto;
+  padding: 60px 0px;
 }
 .box-foot {
-  padding-top: 60px;
-  padding-bottom: 60px;
   display: flex;
   align-items: baseline;
 }
@@ -542,7 +524,7 @@ p {
   line-height: 1.14;
   letter-spacing: 0.02em;
   font-style: normal;
-  padding-top: 20px;
+  margin-top: 20px;
 }
 .logof {
   font-family: Raleway;
@@ -610,7 +592,8 @@ footer-content {
 }
 
 .item:hover,
-.item:focus {
+.item:focus,
+.item:active {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -691,7 +674,8 @@ img {
 }
 
 .circle:hover,
-.circle:focus {
+.circle:focus,
+.circle:active {
   transition-duration: 500ms;
   background-color: var(--accent-color);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -779,12 +763,9 @@ img {
   color: #ffffff;
   padding: 63px 24px;
 }
-.item:focus .overlay {
-  transform: translatey(0);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.item:hover .overlay {
+.item:focus .overlay,
+.item:hover .overlay .item:active .overlay {
   transform: translatey(0);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
