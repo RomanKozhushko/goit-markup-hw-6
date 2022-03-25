@@ -669,24 +669,24 @@ img {
 .text-decor {
   display: block;
   text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
+
 .text-decor:focus .overlay,
 .text-decor:hover .overlay,
 .text-decor:active .overlay {
   transform: translatey(0);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.item {
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
+
 .text-decor:hover,
 .text-decor:focus,
 .text-decor:active {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   outline: none;
   transition-duration: 250ms;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .circle:hover,
