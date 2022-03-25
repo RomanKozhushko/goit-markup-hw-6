@@ -598,7 +598,7 @@ img {
   margin-bottom: 0px;
 }
 
-.card-set > .item {
+.card-set > li {
   flex-basis: calc(100% / 3 - var(--card-set-margin));
   margin-left: var(--card-set-margin);
   margin-top: var(--card-set-margin);
