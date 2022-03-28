@@ -114,9 +114,6 @@ p {
 }
 .header-line {
   border-bottom: 1px solid #ececec;
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
 }
 .header-box {
   display: flex;
